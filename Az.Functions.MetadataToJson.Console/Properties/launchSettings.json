@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Az.Functions.MetadataToJson.Console": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

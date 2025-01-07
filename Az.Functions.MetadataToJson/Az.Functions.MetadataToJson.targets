@@ -7,7 +7,9 @@
   <UsingTask TaskName="Az.Functions.MetadataToJson.FunctionsMetadataToJson" AssemblyFile="$(_FunctionsMetadataToJsonAssemblyPath)"/>
 
   <Target Name="_FunctionsPostPostBuild" AfterTargets="_FunctionsPostBuild">
-    <FunctionsMetadataToJson OutputDirectory="$(TargetDir)" />
+		
+		<!-- as per https://stackoverflow.com/questions/71063189/targetdir-replacement-for-sdk-style-projects-analogue-to-msbuildprojectdi -->
+    <FunctionsMetadataToJson OutputDirectory="$(MSBuildProjectDirectory)\$(OutputPath)" />
   </Target>
 
 </Project>
