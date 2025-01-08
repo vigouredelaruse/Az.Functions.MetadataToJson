@@ -57,7 +57,7 @@ namespace Az.Functions.MetadataToJson
                 var functionDirectory = Directory.CreateDirectory(functionDirectoryPath);
                 var functionMetadataFilePath = Path.Combine(functionDirectory.FullName, "function.json");
 
-                var functionMetadataString = JsonSerializer.Serialize(functionMetadata);
+                var functionMetadataString = JsonSerializer.Serialize(functionMetadata, new JsonSerializerOptions { WriteIndented = true });
 
                 Console.WriteLine($"writing metadata directory pathe = {functionMetadataFilePath}");
                 File.WriteAllText(functionMetadataFilePath, functionMetadataString);
