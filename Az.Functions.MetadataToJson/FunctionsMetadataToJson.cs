@@ -14,7 +14,7 @@ namespace Az.Functions.MetadataToJson
         {
             var functionsMetadataPath = Path.Combine(OutputDirectory!, "functions.metadata");
 
-            // Log.LogMessage($"working with metadata pathe = {functionsMetadataPath}");
+            Console.WriteLine($"working with metadata pathe = {functionsMetadataPath}");
             if (!AssertPathIsValid(OutputDirectory!, functionsMetadataPath))
                 return false;
 
@@ -29,13 +29,13 @@ namespace Az.Functions.MetadataToJson
         {
             if (!Directory.Exists(directoryPath))
             {
-                // Log.LogError($"The parameter value provided is not a valid directory path = {directoryPath}");
+                Console.WriteLine($"The parameter value provided is not a valid directory path = {directoryPath}");
                 return false;
             }
 
             if (!File.Exists(functionsMetadataPath))
             {
-                // Log.LogError($"The directory does not contain a functions.metadata file = {functionsMetadataPath}");
+                Console.WriteLine($"The directory does not contain a functions.metadata file = {functionsMetadataPath}");
                 return false;
             }
 
@@ -44,7 +44,7 @@ namespace Az.Functions.MetadataToJson
 
         private IEnumerable<FunctionMetadata> GetFunctionsMetadata(string functionsMetadataPath)
         {
-            // Log.LogMessage($"working with metadata pathe = {functionsMetadataPath}");
+            Console.WriteLine($"working with metadata pathe = {functionsMetadataPath}");
             var functionsMetadataString = File.ReadAllText(functionsMetadataPath);
             return JsonSerializer.Deserialize<IEnumerable<FunctionMetadata>>(functionsMetadataString)!;
         }
@@ -59,7 +59,7 @@ namespace Az.Functions.MetadataToJson
 
                 var functionMetadataString = JsonSerializer.Serialize(functionMetadata);
 
-                // Log.LogMessage($"writing metadata directory pathe = {functionMetadataFilePath}");
+                Console.WriteLine($"writing metadata directory pathe = {functionMetadataFilePath}");
                 File.WriteAllText(functionMetadataFilePath, functionMetadataString);
             }
         }

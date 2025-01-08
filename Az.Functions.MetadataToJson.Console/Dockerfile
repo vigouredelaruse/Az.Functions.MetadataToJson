@@ -22,12 +22,12 @@ RUN dotnet build "./Az.Functions.MetadataToJson.Console.csproj" -c $BUILD_CONFIG
 # This stage is used to publish the service project to be copied to the final stage
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./Az.Functions.MetadataToJson.Console.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
-
+# RUN dotnet publish "./Az.Functions.MetadataToJson.Console.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish  "./Az.Functions.MetadataToJson.Console.csproj"  --output "/app/publish" --configuration Release  
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
 WORKDIR /app
 # COPY --from=publish /app/publish .
-COPY --from=publish /app/publish /usr/local/bin/azfunctions-metadata
+COPY --from=publish /app/publish /usr/local/bin
 
 # ENTRYPOINT ["dotnet", "Az.Functions.MetadataToJson.Console.dll"]

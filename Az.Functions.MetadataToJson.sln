@@ -9,6 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_misc", "_misc.csproj", "{9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Az.Functions.MetadataToJson.Console", "Az.Functions.MetadataToJson.Console\Az.Functions.MetadataToJson.Console.csproj", "{2846A1C9-84BC-4D30-B63B-955632D2013C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6C70E123-C235-41D3-BB76-B9F382053164}"
+	ProjectSection(SolutionItems) = preProject
+		tagbuildpush-console.ps1 = tagbuildpush-console.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
