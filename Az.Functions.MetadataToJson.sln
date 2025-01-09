@@ -11,8 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Az.Functions.MetadataToJson
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6C70E123-C235-41D3-BB76-B9F382053164}"
 	ProjectSection(SolutionItems) = preProject
+		tagbuild-reproduction.ps1 = tagbuild-reproduction.ps1
 		tagbuildpush-console.ps1 = tagbuildpush-console.ps1
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerBuildReproSample", "DockerBuildReproSample\DockerBuildReproSample.csproj", "{7B5D8BBA-CACB-474A-A38A-1B67512ABFF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +35,10 @@ Global
 		{2846A1C9-84BC-4D30-B63B-955632D2013C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2846A1C9-84BC-4D30-B63B-955632D2013C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2846A1C9-84BC-4D30-B63B-955632D2013C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B5D8BBA-CACB-474A-A38A-1B67512ABFF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5D8BBA-CACB-474A-A38A-1B67512ABFF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5D8BBA-CACB-474A-A38A-1B67512ABFF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5D8BBA-CACB-474A-A38A-1B67512ABFF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

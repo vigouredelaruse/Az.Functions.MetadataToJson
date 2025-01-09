@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "DockerBuildReproSample": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7032"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "DockerfileRunArguments": "--init",
+      "httpPort": 31763,
+      "useSSL": false
+    }
+  }
+}
